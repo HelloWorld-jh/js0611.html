@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>string</title>
+</head>
+<body>
+
+<h2>JavaScript String Properties</h2>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+
+
+<script>
+var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var sln = txt.length; //문자개수
+var str = "Please locate where 'locate' occurs!";
+document.getElementById("demo1").innerHTML = sln;
+var pos1 = str.indexOf("locate"); //return값은 색인번호
+document.getElementById("demo2").innerHTML = pos1;
+var pos2 = str.lastIndexOf("locate"); //마지막 일치하는 곳의 색인번호
+document.getElementById("demo3").innerHTML = pos2;
+var pos3 = str.indexOf("locate",15); //색인번호 15번 이후에서 찾음
+document.getElementById("demo4").innerHTML = pos3;
+var pos4 = str.search("locate");  //indexOf와 동일
+document.getElementById("demo5").innerHTML = pos4;
+</script>
+
+<h3 id="id1"></h3>
+<h3 id="id2"></h3>
+<h3 id="id3"></h3>
+<script>
+var str = "Apple, Banana, Kiwi";
+var res1 = str.slice(7,13); //str문자열에서 색인번호 7번부터 13-1번까지의 문자열을 추출함
+document.getElementById("id1").innerHTML = res1; 
+var res2 = str.slice(7); //색인번호 7번부터 마지막까지 추출
+document.getElementById("id2").innerHTML = res2; 
+var res3 = str.substr(7,6); //색이;ㄴ번호 7번부터 6개를 추출
+document.getElementById("id3").innerHTML = res3;
+</script>
+
+<button onclick="myFunction1()">Try it</button>
+<h3 id="id4">Please visit Microsoft!</h3>
+<script>
+function myFunction1() {
+	 var str = document.getElementById("id4").innerHTML; 
+	 var txt = str.replace("Microsoft","W3Schools"); //바꾼 문장을 반환
+	  document.getElementById("id4").innerHTML = txt;
+}
+</script>
+
+<button onclick="myFunction2()">Try it</button>
+
+<script>
+function myFunction2() {
+  var str = "     Hello World!     ";
+  alert(str.trim());
+}
+</script>
+
+<br/>
+<button onclick="myFunction3()">Try it</button>
+<p id="split"></p>
+<script>
+function myFunction3() {
+  var str = "a,b,c,d,e,f";
+  var arr = str.split(","); //arr는 배열
+  document.getElementById("split").innerHTML = arr[0];
+}
+</script>
+
+<p id="split1"></p>
+
+<script>
+var str = "Hello";
+var arr = str.split("");
+var text = "";
+var i;
+for (i = 0; i < arr.length; i++) {
+  text += arr[i] + "<br>"
+}
+document.getElementById("split1").innerHTML = text;
+</script>
+
+<p id="pad"></p>
+
+<script>
+let strpad = "5";
+strpad = strpad.padStart(4,0);
+document.getElementById("pad").innerHTML = strpad;
+</script>
+</body>
+</html>

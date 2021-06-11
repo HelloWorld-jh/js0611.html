@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>number</title>
+</head>
+<body>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+document.getElementById("demo1").innerHTML = 100 / "Apple"; //숫자를 문자열로 나누면 NaN을 반환
+
+var myNumber = 2; 
+var txt = "";
+while (myNumber != Infinity) {
+   myNumber = myNumber * myNumber;
+   txt = txt + myNumber + "<br>";
+}
+document.getElementById("demo2").innerHTML = txt;
+</script>
+
+<p id="demo3"></p>
+
+<script>
+document.getElementById("demo3").innerHTML = 
+  Number(true) + "<br>" +  //Number코어객체의 함수 사용
+  Number(false) + "<br>" +
+  Number("10") + "<br>" + 
+  Number("  10") + "<br>" +
+  Number("10  ") + "<br>" +
+  Number(" 10  ") + "<br>" +
+  Number("10.33") + "<br>" + 
+  Number("10,33") + "<br>" +  //NaN
+  Number("10 33") + "<br>" +  //NaN
+  Number("John")+ "<br>" + //NaN
+  parseInt("-10") + "<br>" +
+  parseInt("-10.33") + "<br>" +
+  parseInt("10") + "<br>" +
+  parseInt("10.33") + "<br>" +
+  parseInt("10 6") + "<br>" +  
+  parseInt("10 years") + "<br>" +  
+  parseInt("years 10") + "<br>" + 
+  parseFloat("10") + "<br>" +
+  parseFloat("10.33") + "<br>" +
+  parseFloat("10 6") + "<br>" +  
+  parseFloat("10 years") + "<br>" +
+  parseFloat("years 10"); 
+</script>
+</body>
+</html>

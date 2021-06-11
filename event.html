@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event</title>
+</head>
+<body>
+
+<h2>이벤트 처리</h2>
+<button onclick="document.getElementById('demo1').innerHTML=Date()">The time is?</button><br/>
+<button onclick="this.innerHTML=Date()">The time is?</button><br/>
+<button onclick="displayDate()">The time is?</button>
+<!-- js코드를 html 시작태그안에 사용할수 있는 곳은 이벤트처리속성의 값에 직접 사용 
+ a 링크태그의 href값으로 javascript:자바스크립트코드 형식으로 사용-->
+ <!--js코드의 주인 엘리먼트로 button임 -->
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+function displayDate() {
+	document.getElementById("demo2").innerHTML = Date();
+}
+</script>
+</body>
+</html>

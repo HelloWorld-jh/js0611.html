@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>innerhtml</title>
+</head>
+<body>
+
+<h2>My First Web Page</h2>
+<p>My First Paragraph.</p>
+
+<p id="demo"></p>
+
+<script>
+//script는 head나 body에 만들수 있다. 권고는 body의 맨밑에다 만듬
+document.getElementById("demo").innerHTML = 5 + 6;
+document.write(5 + 6);
+window.alert(5 + 6); //window객체 제공 메세지창 메서드
+console.log(5 + 6);
+</script>
+</body>
+</html>

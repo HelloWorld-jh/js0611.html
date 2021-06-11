@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>데이터형</title>
+</head>
+<body>
+
+<h2>JavaScript Strings</h2>
+<p id="demo1"></p>
+<script>
+var answer1 = "It's alright";
+var answer2 = "He is called 'Johnny'";
+var answer3 = 'He is called "Johnny"';
+
+document.getElementById("demo1").innerHTML =
+answer1 + "<br>" + 
+answer2 + "<br>" + 
+answer3;
+</script>
+
+<h2>JavaScript 배열</h2>
+<p id="demo2"></p>
+
+<script>
+var cars = ["Saab","Volvo","BMW"]; //배열선언시에 변수명만 필요  자바는 int[] arr = {1,2,3}
+
+document.getElementById("demo2").innerHTML = cars[0]; //배열 원소의 접근은 [색인번호]로 접근 --자바와 동일
+</script>
+
+<h2>JavaScript Objects</h2>
+<p id="demo3"></p>
+
+<script>
+var person = {  //객체형 변수 person
+  firstName : "John", //각 속성별로 줄을 변경해서 작성
+  lastName  : "Doe",
+  age     : 50,
+  eyeColor  : "blue"
+};
+
+document.getElementById("demo3").innerHTML =
+person.firstName + " is " + person.age + " years old.   " +
+typeof person;
+//객체변수의 속성 접근은 변수명.속성명으로 접근
+</script>
+
+<h2>JavaScript typeof</h2>
+<p id="demo4"></p>
+
+<script>
+var car;
+person = null;
+document.getElementById("demo4").innerHTML = 
+typeof "" + "<br/>" +
+typeof "John" + "<br/>" + 
+typeof "John Doe" +  "<br/>" +
+typeof car + "<br/>" + typeof person; //데이터형이 undefined이고 값도 undefined
+//html의 문장을 스크립트에서 사용시는 문자열로 처리
+</script>
+</body>
+</html>

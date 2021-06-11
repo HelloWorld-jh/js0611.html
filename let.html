@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>var과 let비교</title>
+</head>
+<body>
+
+<h2>Declaring a Variable Using var</h2>
+<p id="demo1"></p>
+<script>
+var  x = 10; //global변수
+{
+		var x = 2; //블록안에서 x를 재정의  x값이 2로 변경(global, local)
+}
+document.getElementById("demo1").innerHTML = x;
+</script>
+
+<h2>Declaring a Variable Using let</h2>
+
+<p id="demo2"></p>
+<script>
+var  x = 10;
+{
+	let x = 2; //블록안에서 x를 let로 재정의  x값이 2로 변경(local)
+}
+document.getElementById("demo2").innerHTML = x;
+</script>
+</body>
+</html>
